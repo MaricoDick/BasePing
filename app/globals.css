@@ -150,6 +150,11 @@ a {
   gap: 10px;
 }
 
+.wallet-grid {
+  display: grid;
+  gap: 8px;
+}
+
 .status-chip {
   display: inline-flex;
   align-items: center;

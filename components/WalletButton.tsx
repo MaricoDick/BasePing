@@ -1,44 +1,63 @@
 "use client";
 
+import { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
 import { base } from "wagmi/chains";
 import { shortAddress } from "@/lib/format";
 import { StatusChip } from "@/components/StatusChip";
 
 function connectorLabel(id: string) {
+  if (id === "baseAccount") return "Base Account";
   if (id === "coinbaseWallet") return "Coinbase Wallet";
   if (id === "injected") return "Browser Wallet";
   return "Wallet";
 }
 
 export function WalletButton() {
+  const [localError, setLocalError] = useState<string | null>(null);
   const { address, chainId, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
-  const { connect, connectors, isPending } = useConnect();
+  const { connectAsync, connectors, isPending, error } = useConnect();
   const { switchChain, isPending: isSwitching } = useSwitchChain();
 
   const chainMismatch = isConnected && chainId !== base.id;
-  const preferredConnector =
-    connectors.find((connector) => connector.id === "coinbaseWallet") ??
-    connectors[0];
+  const connectError = localError ?? error?.message ?? null;
 
   if (!isConnected) {
     return (
       <div className="wallet-wrap surface">
-        <button
-          className="btn btn-primary"
-          type="button"
-          onClick={() => {
-            if (preferredConnector) connect({ connector: preferredConnector });
-          }}
-          disabled={!preferredConnector || isPending}
-        >
-          {isPending
-            ? "Connecting..."
-            : preferredConnector
-              ? `Connect ${connectorLabel(preferredConnector.id)}`
-              : "No wallet detected"}
-        </button>
+        <div className="wallet-grid">
+          {connectors.map((connector) => (
+            <button
+              key={connector.uid}
+              className="btn btn-primary"
+              type="button"
+              disabled={isPending}
+              onClick={async () => {
+                setLocalError(null);
+                try {
+                  await connectAsync({ connector });
+                } catch (connectError) {
+                  if (connectError instanceof Error) {
+                    setLocalError(connectError.message);
+                  } else {
+                    setLocalError("Wallet connection failed.");
+                  }
+                }
+              }}
+            >
+              {isPending ? "Connecting..." : `Connect ${connectorLabel(connector.id)}`}
+            </button>
+          ))}
+        </div>
+
+        {connectors.length === 0 ? (
+          <p className="small-note">
+            No connector available. Open this page inside Coinbase Wallet or Base App.
+          </p>
+        ) : null}
+
+        {connectError ? <p className="feedback feedback-error">{connectError}</p> : null}
         <StatusChip tone="neutral">Disconnected</StatusChip>
       </div>
     );
