@@ -35,3 +35,12 @@ Changes made during development are reflected automatically in the browser.
 ## Requirements
 
 Before running the project, make sure you have a JavaScript runtime and package manager installed.
+
+Common options include:
+
+- Node.js with npm
+- Yarn
+- pnpm
+- Bun
+
+Use the package manager that matches your local workflow.
