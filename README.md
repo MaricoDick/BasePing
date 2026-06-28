@@ -110,3 +110,13 @@ This makes it easy to iterate on layout, content, and application behavior.
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
 
 Next.js automatically optimizes and loads the Geist font family.
+
+Learn more about Geist here:
+
+[https://vercel.com/font](https://vercel.com/font)
+
+## Project Structure
+
+A typical Next.js App Router project includes files and folders such as:
+
+```text
