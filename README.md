@@ -100,3 +100,13 @@ The main page can be edited in:
 ```text
 app/page.tsx
 ```
+
+When you save changes, the browser updates automatically while the development server is running.
+
+This makes it easy to iterate on layout, content, and application behavior.
+
+## Fonts
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
+
+Next.js automatically optimizes and loads the Geist font family.
