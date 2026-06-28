@@ -72,3 +72,13 @@ yarn install
 pnpm install
 bun install
 ```
+
+## Running the Development Server
+
+Start the development server with npm:
+
+```bash
+npm run dev
+```
+
+Or use another package manager:
