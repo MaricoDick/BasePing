@@ -120,3 +120,12 @@ Learn more about Geist here:
 A typical Next.js App Router project includes files and folders such as:
 
 ```text
+app/
+public/
+package.json
+next.config.*
+```
+
+The `app` directory contains the application routes and pages.
+
+The `public` directory is used for static assets.
