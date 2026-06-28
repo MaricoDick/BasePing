@@ -129,3 +129,12 @@ next.config.*
 The `app` directory contains the application routes and pages.
 
 The `public` directory is used for static assets.
+
+The `package.json` file defines scripts and dependencies.
+
+## Available Scripts
+
+Run the development server:
+
+```bash
+npm run dev
