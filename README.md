@@ -147,3 +147,13 @@ npm run build
 ```
 
 Start the production server after building:
+
+```bash
+npm run start
+```
+
+Run linting, if configured in the project:
+
+```bash
+npm run lint
+```
