@@ -157,3 +157,11 @@ Run linting, if configured in the project:
 ```bash
 npm run lint
 ```
+
+## Deployment
+
+The easiest way to deploy a Next.js application is with Vercel.
+
+You can start from the Vercel deployment page:
+
+[https://vercel.com/new](https://vercel.com/new)
