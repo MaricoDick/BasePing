@@ -17,3 +17,12 @@ The application runs locally at `http://localhost:3000` during development.
 You can begin customizing the project by editing the main page file at:
 
 ```text
+app/page.tsx
+```
+
+Changes made during development are reflected automatically in the browser.
+
+## Features
+
+- Built with Next.js
+- Created using `create-next-app`
