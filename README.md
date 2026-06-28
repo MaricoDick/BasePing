@@ -26,3 +26,12 @@ Changes made during development are reflected automatically in the browser.
 
 - Built with Next.js
 - Created using `create-next-app`
+- Uses the App Router project structure
+- Supports local development with hot reloading
+- Includes optimized font loading through `next/font`
+- Uses the Geist font family from Vercel
+- Ready to deploy on Vercel or any supported Next.js hosting platform
+
+## Requirements
+
+Before running the project, make sure you have a JavaScript runtime and package manager installed.
