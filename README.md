@@ -54,3 +54,12 @@ git clone https://github.com/MaricoDick/BasePing.git
 ```
 
 Move into the project directory:
+
+```bash
+cd BasePing
+```
+
+Install dependencies:
+
+```bash
+npm install
