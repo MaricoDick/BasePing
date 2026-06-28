@@ -176,3 +176,12 @@ To learn more about Next.js, visit the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
+- [Next.js GitHub Repository](https://github.com/vercel/next.js)
+
+## Notes
+
+This README describes the current project as a Next.js starter application.
+
+Update this file as the application grows.
+
+Add details about routes, environment variables, deployment steps, and project-specific conventions when they become relevant.
