@@ -44,3 +44,13 @@ Common options include:
 - Bun
 
 Use the package manager that matches your local workflow.
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MaricoDick/BasePing.git
+```
+
+Move into the project directory:
