@@ -63,3 +63,12 @@ Install dependencies:
 
 ```bash
 npm install
+```
+
+If you use a different package manager, install dependencies with one of the following commands:
+
+```bash
+yarn install
+pnpm install
+bun install
+```
